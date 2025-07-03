@@ -31,58 +31,76 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-black bg-opacity-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div className={`transition-all duration-1000 transform ${
+    <section id="about" className="py-32 px-6 bg-gray-950 bg-opacity-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          {/* Left Content */}
+          <div className={`lg:col-span-5 transition-all duration-1000 transform ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
           }`}>
-            <h2 className="text-4xl md:text-5xl font-thin mb-6 tracking-wider">
-              ABOUT <span className="text-yellow-400">ME</span>
-            </h2>
+            <div className="mb-12">
+              <h2 className="text-5xl md:text-6xl font-extralight mb-4 tracking-[0.1em]">
+                ABOUT
+              </h2>
+              <h3 className="text-3xl md:text-4xl font-extralight text-yellow-400 tracking-[0.1em]">
+                THE ARTIST
+              </h3>
+            </div>
             
-            <p className="text-gray-300 text-lg mb-6 font-light leading-relaxed">
-              I'm a passionate photographer with over 5 years of experience capturing life's most beautiful moments. 
-              My work focuses on creating authentic, emotional connections through the lens.
-            </p>
-            
-            <p className="text-gray-300 text-lg mb-8 font-light leading-relaxed">
-              From intimate portraits to sweeping landscapes, I believe every image should tell a story that resonates 
-              with the viewer long after they've looked away.
-            </p>
+            <div className="space-y-6 text-gray-300 text-lg font-light leading-relaxed">
+              <p>
+                I'm a passionate photographer with over 5 years of experience capturing life's most 
+                beautiful moments. My work focuses on creating authentic, emotional connections through the lens.
+              </p>
+              
+              <p>
+                From intimate portraits to sweeping landscapes, I believe every image should tell a story 
+                that resonates with the viewer long after they've looked away.
+              </p>
+              
+              <p>
+                My approach combines technical excellence with artistic vision, ensuring that each photograph 
+                not only captures a moment but transforms it into something timeless.
+              </p>
+            </div>
+          </div>
 
-            <div className="grid grid-cols-2 gap-6">
+          {/* Right Content */}
+          <div className={`lg:col-span-7 transition-all duration-1000 transform ${
+            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
+          }`}>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-8 mb-12">
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className={`text-center transition-all duration-700 transform ${
+                  className={`text-center p-8 border border-gray-800 hover:border-yellow-400 transition-all duration-500 transform ${
                     isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
                   }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
-                  <stat.icon className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                  <div className="text-2xl font-light text-white">{stat.number}</div>
-                  <div className="text-sm text-gray-400 tracking-wider">{stat.label}</div>
+                  <stat.icon className="w-8 h-8 mx-auto mb-4 text-yellow-400" />
+                  <div className="text-3xl font-extralight text-white mb-2 tracking-wider">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-gray-400 tracking-[0.1em] font-light">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Image */}
-          <div className={`transition-all duration-1000 transform ${
-            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
-          }`}>
+            {/* Image Placeholder */}
             <div className="relative">
-              <div className="aspect-square bg-gray-900 overflow-hidden">
+              <div className="aspect-[3/4] bg-gray-900 overflow-hidden">
                 <img
                   src="/placeholder.svg"
                   alt="Alex Chen - Photographer"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-yellow-400 bg-black bg-opacity-80 flex items-center justify-center">
-                <Camera className="w-12 h-12 text-yellow-400" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 border border-yellow-400 bg-black flex items-center justify-center">
+                <Camera className="w-8 h-8 text-yellow-400" />
               </div>
             </div>
           </div>

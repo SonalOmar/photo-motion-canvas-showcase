@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Instagram, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
@@ -47,105 +47,125 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'alex@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567' },
-    { icon: MapPin, label: 'Location', value: 'New York, NY' }
-  ];
-
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className={`text-center mb-16 transition-all duration-1000 transform ${
+    <section id="contact" className="py-32 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className={`text-center mb-20 transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
         }`}>
-          <h2 className="text-4xl md:text-6xl font-thin mb-4 tracking-wider">
-            LET'S <span className="text-yellow-400">CONNECT</span>
+          <h2 className="text-5xl md:text-7xl font-extralight mb-4 tracking-[0.1em]">
+            GET IN
           </h2>
-          <p className="text-gray-400 text-lg font-light">
-            Ready to create something beautiful together?
+          <h3 className="text-3xl md:text-5xl font-extralight text-yellow-400 tracking-[0.1em] mb-8">
+            TOUCH
+          </h3>
+          <p className="text-gray-400 text-lg font-light max-w-2xl mx-auto">
+            Ready to create something beautiful together? Let's discuss your vision and bring it to life.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Contact Info */}
-          <div className={`transition-all duration-1000 transform ${
+          <div className={`lg:col-span-4 transition-all duration-1000 transform ${
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
           }`}>
-            <h3 className="text-2xl font-light mb-8 tracking-wider">GET IN TOUCH</h3>
-            
-            <div className="space-y-6 mb-8">
-              {contactInfo.map((info, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center space-x-4 transition-all duration-700 transform ${
-                    isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                  }`}
-                  style={{ transitionDelay: `${index * 200}ms` }}
-                >
-                  <info.icon className="w-6 h-6 text-yellow-400" />
-                  <div>
-                    <div className="text-sm text-gray-400 tracking-wider">{info.label}</div>
-                    <div className="text-white font-light">{info.value}</div>
-                  </div>
+            <div className="space-y-8 mb-12">
+              <div className="flex items-start space-x-4">
+                <Mail className="w-6 h-6 text-yellow-400 mt-1" />
+                <div>
+                  <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">EMAIL</div>
+                  <div className="text-white font-light">alex@example.com</div>
                 </div>
-              ))}
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <Phone className="w-6 h-6 text-yellow-400 mt-1" />
+                <div>
+                  <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">PHONE</div>
+                  <div className="text-white font-light">+1 (555) 123-4567</div>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <MapPin className="w-6 h-6 text-yellow-400 mt-1" />
+                <div>
+                  <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">LOCATION</div>
+                  <div className="text-white font-light">New York, NY</div>
+                </div>
+              </div>
             </div>
 
-            <p className="text-gray-300 font-light leading-relaxed">
-              Whether you're looking for a portrait session, event coverage, or just want to collaborate on a creative project, 
-              I'd love to hear from you. Let's make something amazing together.
-            </p>
+            <div className="border-t border-gray-800 pt-8">
+              <div className="text-sm text-gray-400 tracking-[0.1em] mb-4">FOLLOW</div>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-500 hover:text-yellow-400 transition-colors duration-300">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-500 hover:text-yellow-400 transition-colors duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="text-gray-500 hover:text-yellow-400 transition-colors duration-300">
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Contact Form */}
-          <div className={`transition-all duration-1000 transform ${
+          <div className={`lg:col-span-8 transition-all duration-1000 transform ${
             isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'
           }`}>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <Input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-transparent border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
-                />
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <label className="block text-sm text-gray-400 tracking-[0.1em] mb-3">NAME</label>
+                  <Input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-0 border-b border-gray-700 rounded-none px-0 py-4 text-white placeholder-gray-600 focus:border-yellow-400 focus:ring-0"
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm text-gray-400 tracking-[0.1em] mb-3">EMAIL</label>
+                  <Input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-transparent border-0 border-b border-gray-700 rounded-none px-0 py-4 text-white placeholder-gray-600 focus:border-yellow-400 focus:ring-0"
+                    placeholder="your@email.com"
+                  />
+                </div>
               </div>
               
               <div>
-                <Input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-transparent border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400"
-                />
-              </div>
-              
-              <div>
+                <label className="block text-sm text-gray-400 tracking-[0.1em] mb-3">MESSAGE</label>
                 <textarea
                   name="message"
                   rows={6}
-                  placeholder="Your Message"
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:border-yellow-400 focus:outline-none rounded-md resize-none"
+                  className="w-full bg-transparent border-0 border-b border-gray-700 px-0 py-4 text-white placeholder-gray-600 focus:border-yellow-400 focus:outline-none resize-none"
+                  placeholder="Tell me about your project..."
                 />
               </div>
               
-              <Button
-                type="submit"
-                className="w-full bg-yellow-400 text-black hover:bg-transparent hover:text-yellow-400 border border-yellow-400 transition-all duration-300 tracking-wider font-light"
-              >
-                <Send className="w-4 h-4 mr-2" />
-                SEND MESSAGE
-              </Button>
+              <div className="pt-8">
+                <Button
+                  type="submit"
+                  className="group relative px-12 py-4 bg-transparent border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-500 tracking-[0.1em] font-light"
+                >
+                  <Send className="w-4 h-4 mr-3" />
+                  SEND MESSAGE
+                </Button>
+              </div>
             </form>
           </div>
         </div>
