@@ -1,11 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { Suspense } from 'react';
+import Hero from '../components/Hero';
+import Gallery from '../components/Gallery';
+import About from '../components/About';
+import Contact from '../components/Contact';
+import ThreeBackground from '../components/ThreeBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
+      {/* 3D Background */}
+      <div className="fixed inset-0 z-0">
+        <Suspense fallback={<div className="bg-black w-full h-full" />}>
+          <ThreeBackground />
+        </Suspense>
+      </div>
+      
+      {/* Content */}
+      <div className="relative z-10">
+        <Hero />
+        <Gallery />
+        <About />
+        <Contact />
       </div>
     </div>
   );
