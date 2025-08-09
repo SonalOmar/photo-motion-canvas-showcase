@@ -8,13 +8,16 @@ import ThreeBackground from '../components/ThreeBackground';
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
-      {/* 3D Background */}
+    <div>
+
+   
+    {/* <div className="relative min-h-screen bg-black text-white overflow-x-hidden">
+      3D Background
       <div className="fixed inset-0 z-0">
         <Suspense fallback={<div className="bg-black w-full h-full" />}>
           <ThreeBackground />
         </Suspense>
-      </div>
+      </div> */}
       
       {/* Content */}
       <div className="relative z-10">
