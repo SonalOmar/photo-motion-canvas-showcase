@@ -32,7 +32,6 @@ const About = () => {
 
   return (
     <div
-      id="about"
       className="bg-custom min-h-screen flex flex-col items-center justify-center text-white"
       style={{ backgroundImage: "url('/public/bg.jpg')" }}
     >

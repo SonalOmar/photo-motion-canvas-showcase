@@ -85,7 +85,7 @@ const Contact = () => {
                   <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">
                     EMAIL
                   </div>
-                  <div className="text-black font-light">
+                  <div className="text-gray-900 font-light">
                     guptakaushi81@gmail.com
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                   <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">
                     PHONE
                   </div>
-                  <div className="text-yellow font-light">+91 76520 02124</div>
+                  <div className="text-yellow-400 font-light">+91 76520 02124</div>
                 </div>
               </div>
 
@@ -107,7 +107,7 @@ const Contact = () => {
                   <div className="text-sm text-gray-400 tracking-[0.1em] mb-1">
                     LOCATION
                   </div>
-                  <div className="text-black font-light">KANPUR, INDIA</div>
+                  <div className="text-gray-900 font-light">KANPUR, INDIA</div>
                 </div>
               </div>
             </div>
