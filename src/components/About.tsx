@@ -33,7 +33,7 @@ const About = () => {
   return (
     <div
       className="bg-custom min-h-screen flex flex-col items-center justify-center text-white"
-      style={{ backgroundImage: "url('/bg.jpg')" }}
+      style={{ backgroundImage: "url('bg.jpg')" }}
     >
       <section id="about" className="py-32 px-6 bg-gray-950 bg-opacity-50">
         <div className="max-w-7xl mx-auto">

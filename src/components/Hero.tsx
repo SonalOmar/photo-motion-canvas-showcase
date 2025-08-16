@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <section
       className="min-h-screen flex flex-col justify-center items-center px-6 relative bg-cover bg-center"
-      style={{ backgroundImage: "url('/kaushibg.jpg')" }}
+      style={{ backgroundImage: "url('kaushibg.jpg')" }}
     >
       <div className="max-w-5xl mx-auto text-center">
         <div
