@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const galleryImages = [
   {
     id: 1,
-    src: "/images/lifestyle/image1.JPG",
+    src: "images/lifestyle/image1.JPG",
     title: "Urban Living",
     category: "Lifestyle",
     year: "2024",
@@ -12,7 +12,7 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: "/images/lifestyle/image2.JPG",
+    src: "images/lifestyle/image2.JPG",
     title: "Golden Hour Hike",
     category: "Lifestyle",
     year: "2024",
@@ -20,7 +20,7 @@ const galleryImages = [
   },
   {
     id: 3,
-    src: "/images/lifestyle/image3.JPG",
+    src: "images/lifestyle/image3.JPG",
     title: "Street Vibes",
     category: "Lifestyle",
     year: "2023",
@@ -28,7 +28,7 @@ const galleryImages = [
   },
   {
     id: 4,
-    src: "/images/lifestyle/image4.JPG",
+    src: "images/lifestyle/image4.JPG",
     title: "Nature’s Beauty",
     category: "Lifestyle",
     year: "2023",
@@ -36,7 +36,7 @@ const galleryImages = [
   },
   {
     id: 5,
-    src: "/images/lifestyle/image5.JPG",
+    src: "images/lifestyle/image5.JPG",
     title: "City Lights",
     category: "Lifestyle",
     year: "2024",
@@ -45,7 +45,7 @@ const galleryImages = [
 
   {
     id: 8,
-    src: "/images/lifestyle/image8.JPG",
+    src: "images/lifestyle/image8.JPG",
     title: "Minimal Watch",
     category: "Lifestyle",
     year: "2023",
@@ -53,7 +53,7 @@ const galleryImages = [
   },
   {
     id: 9,
-    src: "/images/lifestyle/image9.JPG",
+    src: "images/lifestyle/image9.JPG",
     title: "Minimal Watch",
     category: "Lifestyle",
     year: "2023",
@@ -61,7 +61,7 @@ const galleryImages = [
   },
   {
     id: 10,
-    src: "/images/outdoor/image1.JPG",
+    src: "images/outdoor/image1.JPG",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -69,7 +69,7 @@ const galleryImages = [
   },
   {
     id: 6,
-    src: "/images/lifestyle/image6.JPG",
+    src: "images/lifestyle/image6.JPG",
     title: "Minimal Watch",
     category: "Lifestyle",
     year: "2023",
@@ -77,7 +77,7 @@ const galleryImages = [
   },
   {
     id: 11,
-    src: "/images/outdoor/image2.JPG",
+    src: "images/outdoor/image2.JPG",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -85,7 +85,7 @@ const galleryImages = [
   },
   {
     id: 12,
-    src: "/images/outdoor/image3.JPG",
+    src: "images/outdoor/image3.JPG",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -93,7 +93,7 @@ const galleryImages = [
   },
   {
     id: 13,
-    src: "/images/outdoor/image4.png",
+    src: "images/outdoor/image4.png",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -101,7 +101,7 @@ const galleryImages = [
   },
   {
     id: 14,
-    src: "/images/outdoor/image5.JPG",
+    src: "images/outdoor/image5.JPG",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -109,7 +109,7 @@ const galleryImages = [
   },
   {
     id: 15,
-    src: "/images/outdoor/image6.JPG",
+    src: "images/outdoor/image6.JPG",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -117,7 +117,7 @@ const galleryImages = [
   },
   {
     id: 16,
-    src: "/images/outdoor/image7.jpg",
+    src: "images/outdoor/image7.jpg",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -125,7 +125,7 @@ const galleryImages = [
   },
   {
     id: 17,
-    src: "/images/outdoor/image8.jpg",
+    src: "images/outdoor/image8.jpg",
     title: "Minimal Watch",
     category: "Outdoor",
     year: "2023",
@@ -133,7 +133,7 @@ const galleryImages = [
   },
   {
     id: 18,
-    src: "/images/product/image1.jpg",
+    src: "images/product/image1.jpg",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -141,7 +141,7 @@ const galleryImages = [
   },
   {
     id: 19,
-    src: "/images/product/image2.jpg",
+    src: "images/product/image2.jpg",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -149,7 +149,7 @@ const galleryImages = [
   },
   {
     id: 20,
-    src: "/images/product/image3.png",
+    src: "images/product/image3.png",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -157,7 +157,7 @@ const galleryImages = [
   },
   {
     id: 21,
-    src: "/images/product/image4.png",
+    src: "images/product/image4.png",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -174,7 +174,7 @@ const galleryImages = [
 
   {
     id: 24,
-    src: "/images/product/image7.jpg",
+    src: "images/product/image7.jpg",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -182,7 +182,7 @@ const galleryImages = [
   },
   {
     id: 25,
-    src: "/images/product/image8.JPG",
+    src: "images/product/image8.JPG",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
@@ -190,7 +190,7 @@ const galleryImages = [
   },
   {
     id: 26,
-    src: "/images/product/image9.JPG",
+    src: "images/product/image9.JPG",
     title: "Minimal Watch",
     category: "Product",
     year: "2023",
