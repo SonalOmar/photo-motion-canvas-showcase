@@ -28,7 +28,7 @@ const Hero = () => {
               Kaushi
             </h1>
             <h2
-              className="text-4xl md:text-6xl font-bold text-yellow-400 tracking-[0.15em] mb-8"
+              className="text-4xl md:text-8xl font-extralight text-yellow-400 tracking-[0.15em] mb-8"
               style={{ color: "#1f1c20ff", fontFamily: "Playfair Display" }}
             >
               Gupta
